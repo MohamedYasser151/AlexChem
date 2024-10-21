@@ -8,12 +8,12 @@ import "./css/Cartitem.css";
 const CartItem = ({ data, setData, removeFromCart }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const login = Cookies.get('login');
-    if (login !== 'true') {
-      navigate('/signin');
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const login = Cookies.get('login');
+  //   if (login !== 'true') {
+  //     navigate('/signin');
+  //   }
+  // }, [navigate]);
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];

@@ -31,14 +31,15 @@ function Empcart() {
       
   const navigate = useNavigate();
 
-  useEffect(() => {
+  // useEffect(() => {
   
-    const login = Cookies.get('loginemp');
-    if (login !== 'true') {
+  //   const login = Cookies.get('loginemp');
+  //   if (login !== 'true') {
       
-      navigate('/signinEmp');
-    }
-  }, [navigate]);
+  //     navigate('/signinEmp');
+  //   }
+  // }, [navigate]);
+  
   const handleRemove = async (id) => {
     try {
       await axios.delete(`http://localhost:8083/removeCart/${id}`);
