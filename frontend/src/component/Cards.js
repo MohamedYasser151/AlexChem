@@ -25,14 +25,14 @@ const  Cards =({item,handleClick})=>{
 
 const navigate = useNavigate()
 
-useEffect(() => {
+// useEffect(() => {
   
-  const login = Cookies.get('login');
-  if (login !== 'true') {
+//   const login = Cookies.get('login');
+//   if (login !== 'true') {
     
-    navigate('/signin');
-  }
-}, [navigate]);
+//     navigate('/signin');
+//   }
+// }, [navigate]);
 
 const handleChange = (e) => {
   setSendData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
