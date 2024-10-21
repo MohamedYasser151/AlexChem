@@ -13,10 +13,10 @@ const AllCard = ({ handleClick }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const login = Cookies.get('login');
-    if (login !== 'true') {
-      navigate('/signin');
-    }
+    // const login = Cookies.get('login');
+    // if (login !== 'true') {
+    //   navigate('/signin');
+    // }
 
     const fetchData = async () => {
       try {
