@@ -136,6 +136,7 @@ function Home({handleClick}) {
   modules={[Grid, Autoplay, Navigation]}
   className={`mySwiper ${style.mySwiperi22}`}
 >
+  
   <SwiperSlide className={style.SwiperSlide2}>
     <img src={img2} alt="Product Image" />
     {/* <button 
