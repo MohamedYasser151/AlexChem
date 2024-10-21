@@ -1,0 +1,65 @@
+
+
+.bghome{
+    width: 100%;
+    height: 100vh;
+   padding: 2px;
+   margin-top: 200px;
+
+}
+.bghome img{
+    margin-top: 8px;
+    width: 100%;
+    /* height: 400px; */
+}
+
+.bghome h1{
+    margin: 30px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 150px;
+
+}
+.cardimags{
+    
+    height:250px;
+    border:none;
+}
+.mySwiper11{
+    margin-bottom: 150px;
+}
+
+.mySwiper22{
+    width: 80%;
+    height: 250px;
+    margin-bottom: 150px;
+}
+.SwiperSlide2{
+    /* position: absolute; */
+}
+.CartBtn2 {
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: absolute;
+    bottom: 0;
+  }
+  
+
+@media (max-width:701px){
+    .cardimags{
+        
+        height:200px;
+        border:none;
+    }
+  }

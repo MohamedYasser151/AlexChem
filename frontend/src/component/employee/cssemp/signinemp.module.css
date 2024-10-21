@@ -1,0 +1,99 @@
+.bodyemp{
+   height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.videoBackground{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.containeremp{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #fff4;
+    box-shadow: 0 0 8px #fff;
+     backdrop-filter: blur(5px);
+    border-radius: 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.boxenp{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+   
+  }
+  /* .containeremp::before{
+    content: '';
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear  infinite;
+  } */
+  /* .containeremp::after{
+    content: '';
+    width: 190px;
+    height: 190px;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    box-shadow: inset 20px 20px 20px 20px #0000008c;
+  }
+  @keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(-360deg);
+    }
+  } */
+ 
+.boxenp input{
+   width: 90%;
+   margin-top: 30px;
+   background: none;
+   outline: none;
+   border: 1px solid #fff;
+   color: #fff;
+   border-radius: 10px;
+   padding: 5px;
+}
+.boxenp  .name,
+.pass{
+    position: relative;
+}
+.boxenp .iconuser,
+.iconlock{
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    color: #fff;
+    font-size: 20px;
+}
+.boxenp input::placeholder{
+    color: #fff;
+}
+.boxenp button{
+    margin-top: 20px;
+    border: none;
+    background: #fff;
+    width: 90%;
+    border-radius: 10px;
+}

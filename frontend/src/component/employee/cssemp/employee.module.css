@@ -1,0 +1,85 @@
+.bodyenplo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+   
+}
+.tablee{
+    margin-top: 100px;
+    width: 90%;
+    
+    background: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.h1 {
+    width: 100%;
+    background: #fff4;
+    color: #500c7f;
+    display: flex;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: #500c7f;
+    transition: 0.3s;
+}
+a:hover{
+  
+    color: #2f034e;
+}
+
+thead{
+    background: #500c7f;
+    color: #fff;
+   
+}
+table{
+    width: 100%;
+}
+/* table,td,th{
+    margin: 5px 0;
+} */
+td{
+    font-size: 15px;
+    
+}
+tr{
+    border-bottom: 1px solid #500c7f;
+
+}
+tr button{
+    background: #500c7f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+td  img{
+    width: 50px;
+    height: 50px;
+    padding:4px;
+}
+.email{
+    width: 20%;
+   
+}
+td h6{
+    height: 30px;
+    background: #500c7f;
+    color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
