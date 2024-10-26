@@ -7,7 +7,7 @@ import styleess from './cssemp/employee.module.css'
 function Empcart() {
     const [dataCart , setDataCart]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:8083/addtocart')
+        fetch('https://alexchem-server.vercel.app/addtocart')
         .then(res=> res.json())
         .then(cart => setDataCart(cart))
         .catch(err => console.log(err))
@@ -42,7 +42,7 @@ function Empcart() {
   
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:8083/removeCart/${id}`);
+      await axios.delete(`https://alexchem-server.vercel.app/removeCart/${id}`);
       window.location.reload();
     } catch (err) {
       console.error("Error deleting record:", err);
@@ -54,7 +54,7 @@ function Empcart() {
       
     <div className={styleess.tablee}>
     <h1 className={styleess.h1}>
-     Brand
+    AlexChem
     
 
     </h1>
