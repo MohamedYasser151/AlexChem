@@ -42,7 +42,7 @@ const Form = () => {
         // email: userEmail,
       }));
   
-      await axios.post('http://localhost:8083/addtocart', {
+      await axios.post('https://alexchem-server.vercel.app/addtocart', {
         data: groupedCartData,
       });
   

@@ -69,7 +69,7 @@ const CartItem = ({ data, setData, removeFromCart }) => {
       alert("عربة التسوق فارغة");
       return;
     }
-    navigate('/form'); // التوجيه إلى صفحة الفورم لإدخال البيانات الشخصية
+    navigate('/form'); 
   };
 
   return (
