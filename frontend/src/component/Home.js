@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState ,useEffect} from 'react';
 import { useNavigate,NavLink } from 'react-router-dom'
 import Cookies from 'js-cookie';
 
@@ -9,6 +9,9 @@ import Row from 'react-bootstrap/Row';
 
 import img1 from './image/1.png'
 import data from './data';
+
+import BtnHome from './btnHome';
+
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -37,11 +40,19 @@ import './css/styles.css';
 // import required modules
 import { Grid, Pagination, Autoplay, Navigation } from 'swiper/modules';
  
+import Typed from 'typed.js';
+
 // images
 import  img from "./image/1.png";
 import  img2 from "./image/2.png";
 import img3 from "./image/3.png"
 import img4 from "./image/4.png"
+
+import flowers from './image/flowers.png'
+import flowers2 from './image/flowers2.png'
+import Perfume from './image/Perfume.png'
+import Aos from 'aos'
+import  "aos/dist/aos.css" 
 import { useTranslation } from 'react-i18next';
 
 
@@ -50,7 +61,10 @@ import { useTranslation } from 'react-i18next';
 function Home({handleClick}) {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-
+  
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
   // useEffect(() => {
   
   //   const login = Cookies.get('loginkids');
@@ -60,31 +74,47 @@ function Home({handleClick}) {
   //   }
   // }, [navigate]);
  
+
+  const textRef1 = useRef(null);
+  const textRef2 = useRef(null);
   
+  useEffect(() => {
+    const typed1 = new Typed(textRef1.current, {
+        strings: ["Fragrances that"],
+        typeSpeed: 50,
+        showCursor: false,
+    });
+
+    const typed2 = new Typed(textRef2.current, {
+        strings: ["attract people"],
+        typeSpeed: 50,
+        startDelay: 2000, // تأخير البداية للنص الثاني ليبدأ بعد الأول
+        showCursor: false,
+    });
+
+    return () => {
+        typed1.destroy();
+        typed2.destroy();
+    };
+}, []);
+
 
   
   return (
     <div className={style.bghome}>
-      {/* <img src={img1} alt="" /> */}
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className={`mySwiper ${style.mySwiper11}`}
-      >
-        <SwiperSlide><img src={img1} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={img1} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={img1} alt="" /></SwiperSlide>
-       
-      </Swiper>
+   <section className={style.sections}>
+    <img src={flowers} alt="" className={style.flowersRight} data-aos="fade-left"/>
+    {/* <img src={Perfume} alt="" className={style.Perfume} data-aos="fade-left"/> */}
+    <span ref={textRef1} className={style.text}></span>
+    <span ref={textRef2} className={style.text}></span>
+
+    <BtnHome />
+    <img src={flowers2} alt="" className={style.flowersLeft} data-aos="fade-right"/>
+
+</section>
+
+
+
       {/* {data.map((item)=>(
            <div className="col-5 col-md-3 col-lg-2 mx-2 mb-1" >
              <div className="col">

@@ -23,6 +23,7 @@ const Home = lazy(()=> import('./component/Home.js'))
 const Navbars = lazy(()=> import('./component/Navbars.js'))
 const Footer = lazy(()=> import('./component/Footer.js'))
 const AllCard = lazy(()=> import('./component/AllCard.js'))
+// const Quantity = lazy(()=> import('./component/quantity.js'))
 
 
 
@@ -115,6 +116,7 @@ const App = ()=>{
 
       <Route path="/Employyee2" element={<Empcart/>}/>
       <Route path="/PricesEditor" element={<PricesEditor/>}/>
+      {/* <Route path="/Quantity" element={<Quantity/>}/> */}
 
 
          {/* <Route path="*" element={

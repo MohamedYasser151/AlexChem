@@ -65,19 +65,19 @@ const changeFr = () =>{
 
   return (
     
-    <Navbar expand="lg" className=" navbar navbar-light flex-column">
+    <Navbar expand="lg" className=" navbar navbar-light ">
+    
+
+      <Container fluid>
       <NavLink to="/home" className='icon' >
-        <Navbar.Brand   style={{color:"#000", fontSize:"30px"}}>
+        <Navbar.Brand  className='icon2' style={{ fontSize:"30px"}}>
         AlexChem
-      <hr  />
        </Navbar.Brand>
         </NavLink>
 
-      <Container fluid>
-        
         <Navbar.Toggle aria-controls="navbarScroll " className="Toggle"  />
         <Navbar.Collapse id="navbarScroll ">
-          <Nav className="me-auto" style={{ maxHeight: '100px'}} navbarScroll>
+          <Nav className="mr-auto  mx-auto my-lg-0" style={{ maxHeight: '100px'}} navbarScroll>
             <NavLink to="/home" className="NavLink"  >{t("Home")}</NavLink>
             <NavLink to="/product" className="NavLink"  >{t("products")}</NavLink>
             {/* <NavLink to="/download" className="NavLink"  >{t("Download App")}</NavLink> */}
@@ -92,7 +92,7 @@ const changeFr = () =>{
             <NavLink to="/cartitem"className="NavLink" ><i class="fa-solid fa-cart-shopping"></i> <span className="numbercart">{size}</span></NavLink>
           </Nav>
 
-          <Form className="d-flex"  onSubmit={handleClick}>
+          {/* <Form className="d-flex"  onSubmit={handleClick}>
             <Form.Control
               type="search"
               placeholder={t("Search")}
@@ -101,7 +101,7 @@ const changeFr = () =>{
               onChange={change}
             />
             <Button variant="outline-primary " type='submit'>{t("Search")}</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

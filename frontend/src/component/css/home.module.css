@@ -4,14 +4,10 @@
     width: 100%;
     height: 100vh;
    padding: 2px;
-   margin-top: 200px;
+   /* margin-top: 200px; */
 
 }
-.bghome img{
-    margin-top: 8px;
-    width: 100%;
-    /* height: 400px; */
-}
+
 
 .bghome h1{
     margin: 30px;
@@ -56,10 +52,75 @@
   }
   
 
+  .sections{
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  /* background-image: url(../image/2.jpg); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+  /* d965ab */
+
+  .flowersRight{
+    position: absolute;
+    top: 0;
+    right:0 ;
+  }
+  .flowersLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    /* transform: rotate(180deg);  */
+}
+/* .Perfume{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg); 
+} */
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.text {
+    color: #d965ab;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px; /* حجم الخط */
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ظلال خفيفة للنص */
+    letter-spacing: 1.5px; /* تباعد بين الحروف */
+}
+
+
+
+
 @media (max-width:701px){
     .cardimags{
         
         height:200px;
         border:none;
+    }
+    .flowersRight,
+    .flowersLeft,
+    .Perfume{
+        width: 300px;
+    }
+    .flowersLeft{
+        margin-bottom: 10px;
+    }
+    .text {
+      
+        font-size: 36px;
+  
     }
   }

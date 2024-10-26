@@ -309,8 +309,52 @@ app.put('/products/:id', (req, res) => {
 });
 
 
+app.post('/Quantity',(req,res)=>{
+  const sql = "INSERT INTO pro (`nameproduct`,`quantity`) VALUES (?)";
+  const values =[
+      req.body.nameproduct,
+      req.body.quantity,
+  ]
+  db.query(sql,[values],(err,result)=>{
+      if(err) return res.json({Message :"error in Node"})
+      return res.json(result);
+  })
+})  
 
 
+app.post('/Quantity/update', (req, res) => {
+  const { nameproduct, quantity } = req.body;
+  const sql = "UPDATE pro SET quantity = ? WHERE nameproduct = ?";
+
+  db.query(sql, [quantity, nameproduct], (err, result) => {
+      if (err) {
+          return res.json({ Message: "Error in Node" });
+      }
+      return res.json({ Message: "Quantity updated successfully", result });
+  });
+});
+
+app.get('/Quantity',(req,res)=>{
+  const sql = "SELECT *  FROM pro";
+  db.query(sql,(err,data)=>{
+      if(err) return res.json(err);
+      return res.json(data);
+  })
+})
+
+
+app.post('/updateQuantity', (req, res) => {
+  const { title, quantity } = req.body;
+
+  // تحقق من أنك تقوم بالاستعلام على الكمية من قاعدة البيانات لتقليل الكمية
+  const sql = "UPDATE pro SET quantity = quantity - ? WHERE nameproduct = ?";
+  db.query(sql, [quantity, title], (err, result) => {
+    if (err) {
+      return res.status(500).json(err);
+    }
+    return res.json({ message: 'Quantity updated successfully' });
+  });
+});
 
 
 // remove id product clothes

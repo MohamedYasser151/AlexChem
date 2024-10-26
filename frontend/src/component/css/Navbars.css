@@ -8,13 +8,7 @@
   right: 0;
   z-index: 100;
 }
-hr{
-  width: 100%;
-   height: 3px;
-    border: none;
-     background-color: rgb(5, 255, 5);
-     
-}
+
 .navbar2{
   background: none;
 }
@@ -24,7 +18,7 @@ hr{
     text-decoration: none;
     color: #000;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 40px;
     justify-content: center;
     transition: 0.3s;
     /* bg-dark */
@@ -53,12 +47,16 @@ hr{
   }
 
 .icon {
-  width: 100%;
+  /* width: 100%; */
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+  }
+  .icon2{
+  color: #d965ab;
+
   }
   .numbercart{
     font-size: 17px;
