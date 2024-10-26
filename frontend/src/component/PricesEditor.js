@@ -27,7 +27,7 @@ function PricesEditor() {
   // Save changes to the database
   const saveChanges = async (id, price) => {
     try {
-      const response = await fetch(`http://localhost:8083/products/${id}`, {
+      const response = await fetch(`https://alexchem-server.vercel.app/products/${id}`, {
         method: 'PUT', // Or PATCH depending on your API design
         headers: {
           'Content-Type': 'application/json',
