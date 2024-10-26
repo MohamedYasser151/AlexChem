@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const fetchProductPrices = async () => {
     try {
-        const response = await fetch("http://localhost:8083/products");
+        const response = await fetch("https://alexchem-server.vercel.app/products");
         if (!response.ok) {
             throw new Error("Failed to fetch product data");
         }
