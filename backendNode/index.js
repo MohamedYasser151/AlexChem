@@ -19,23 +19,23 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const db = mysql.createPool({
-//     host:process.env.DB_HOST,
-//     user:process.env.DB_USERNAME,
-//     password:process.env.DB_PASSWORD,
-//     database:process.env.DB_DBNAME,
-//     waitForConnections:true,
-//     connectionLimit:10,
-//     queueLimit:0
-// })
+const db = mysql.createPool({
+    host:process.env.DB_HOST,
+    user:process.env.DB_USERNAME,
+    password:process.env.DB_PASSWORD,
+    database:process.env.DB_DBNAME,
+    waitForConnections:true,
+    connectionLimit:10,
+    queueLimit:0
+})
 
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'brand',
-});
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'brand',
+// });
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
