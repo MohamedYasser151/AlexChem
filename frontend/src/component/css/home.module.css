@@ -3,9 +3,8 @@
 .bghome{
     width: 100%;
     height: 100vh;
-   padding: 2px;
+   /* padding: 2px; */
    /* margin-top: 200px; */
-
 }
 
 
@@ -53,7 +52,7 @@
   
 
   .sections{
-  height: 90vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   /* background-image: url(../image/2.jpg); */
@@ -116,7 +115,7 @@
         width: 300px;
     }
     .flowersLeft{
-        margin-bottom: 10px;
+        margin-bottom: 50px;
     }
     .text {
       

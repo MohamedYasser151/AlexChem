@@ -88,7 +88,7 @@ function Home({handleClick}) {
     const typed2 = new Typed(textRef2.current, {
         strings: ["attract people"],
         typeSpeed: 50,
-        startDelay: 2000, // تأخير البداية للنص الثاني ليبدأ بعد الأول
+        startDelay: 2000, 
         showCursor: false,
     });
 
@@ -109,26 +109,40 @@ function Home({handleClick}) {
     <span ref={textRef2} className={style.text}></span>
 
     <BtnHome />
-    <img src={flowers2} alt="" className={style.flowersLeft} data-aos="fade-right"/>
+    {/* <img src={flowers2} alt="" className={style.flowersLeft} data-aos="fade-right"/> */}
 
 </section>
 
 
 
-      {/* {data.map((item)=>(
-           <div className="col-5 col-md-3 col-lg-2 mx-2 mb-1" >
-             <div className="col">
-              <div className="">
-                <div className={style.cards}>
-                    <NavLink to={item.to} key={item.id} className={style.link}>
-                    <img src={item.image} className={style.img} />
-                    <h6>{item.title}</h6>
-                    </NavLink>
-                </div>
-              </div>
-        </div>
-        </div>
-        ))} */}
+     
+<div class="stats-container">
+  <h1 class="stats-title" data-aos="fade-up">We’re Good with Numbers</h1>
+  
+  <div class="flexx">
+    <div class="stat">
+      <h2 data-aos="fade-up">15</h2>
+      <p data-aos="fade-up">Years of Experience</p>
+    </div>
+    <div class="stat">
+      <h2 data-aos="fade-up">36</h2>
+      <p data-aos="fade-up">Qualified Experts</p>
+    </div>
+    <div class="stat">
+      <h2 data-aos="fade-up">120</h2>
+      <p data-aos="fade-up">Clients Every Year</p>
+    </div>
+    <div class="stat">
+      <h2 data-aos="fade-up">9</h2>
+      <p data-aos="fade-up">Intl. Partners</p>
+    </div>
+  </div>
+</div>
+
+        
+
+
+
         <h1>OUR CATEGORIES</h1>
         <Row xs={2} md={4} className="g-1">
   {data.map((image, idx) => (
