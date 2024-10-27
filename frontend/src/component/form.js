@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './css/form.css'
+import $ from 'jquery';
+import 'jquery-mask-plugin';
 import Cookies from 'js-cookie';
+import './css/form.css'
 
 const Form = () => {
+  useEffect(()=>{
+    $('#numberma').mask('000 0000 0000');
+  }, []);
   const [formData, setFormData] = useState({
     username: "",
     number: "",
@@ -78,6 +83,7 @@ const Form = () => {
           type="text"
           placeholder="Phone number"
           name="number"
+          id="numberma"
           value={formData.number}
           onChange={handleChange}
           className='input'
