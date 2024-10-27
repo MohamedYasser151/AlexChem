@@ -103,7 +103,7 @@ const CartItem = ({ data, setData, removeFromCart }) => {
             ))}
             <div className="total">
               <span className="texttotal">Total price of your cart</span>
-              <span className="totalre">Rs - ${price}</span>
+              <span className="totalre"> ${price}</span>
             </div>
             <button className="btn-31" onClick={handleSubmit}>
               <span className="text-container">

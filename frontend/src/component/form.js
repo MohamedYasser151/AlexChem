@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './css/form.css'
 import Cookies from 'js-cookie';
 
 const Form = () => {
@@ -59,27 +60,33 @@ const Form = () => {
   
 
   return (
-    <div>
-      <h1>إدخال البيانات الشخصية</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="all">
+    <div className='container2'>
+      <h1 className='heading'>AlexChem</h1>
+      <form onSubmit={handleSubmit} className='form'>
         <input
           type="text"
-          placeholder="الاسم"
+          placeholder="username"
           name="username"
           value={formData.username}
           onChange={handleChange}
+          className='input'
+
           required
         />
         <input
           type="text"
-          placeholder="رقم الهاتف"
+          placeholder="Phone number"
           name="number"
           value={formData.number}
           onChange={handleChange}
+          className='input'
+
           required
         />
-        <button type="submit">إرسال البيانات</button>
+        <button type="submit" className='login-button'>Send</button>
       </form>
+    </div>
     </div>
   );
 };

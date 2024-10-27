@@ -112,6 +112,13 @@ const App = ()=>{
            
           </React.Suspense>
           }/>
+        <Route path="/home" element={
+           <React.Suspense fallback={<Loading/>}>
+           <Navbars size={cart.length}  />
+           <Home handleClick={handleClick}/>
+           
+          </React.Suspense>
+          }/>
       
 
       <Route path="/Employyee2" element={<Empcart/>}/>

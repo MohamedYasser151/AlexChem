@@ -140,115 +140,6 @@ function Home({handleClick}) {
 </div>
 
         
-
-
-
-        <h1>OUR CATEGORIES</h1>
-        <Row xs={2} md={4} className="g-1">
-  {data.map((image, idx) => (
-    <Col key={idx}>
-      <Card style={{border: "none"}}>
-        <Card.Img variant="top" src={image.image} className={style.cardimags} />
-      </Card>
-    </Col>
-  ))}
-</Row>
-
-
-    <h1>
-    NEW IN
-      </h1>
-
-      <Swiper
-  slidesPerView={4}
-  autoplay={{
-    delay: 3500,
-    disableOnInteraction: false,
-  }}
-  spaceBetween={30}
-  breakpoints={{
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  }}
-  pagination={{}}
-  modules={[Grid, Autoplay, Navigation]}
-  className={`mySwiper ${style.mySwiperi22}`}
->
-  
-  <SwiperSlide className={style.SwiperSlide2}>
-    <img src={img2} alt="Product Image" />
-    {/* <button 
-      onClick={() => handleClick({
-        id: 50, // Unique product id
-        img: img2,
-        price: 100 // Add the product's price
-      })} 
-      className={style.CartBtn2}
-    >
-      Add to Cart
-    </button> */}
-  </SwiperSlide>
-  <SwiperSlide className={style.SwiperSlide2}>
-    <img src={img} alt="Product Image" />
-    {/* <button 
-      onClick={() => handleClick({
-        id: 50, // Unique product id
-        img: img2,
-        price: 100 // Add the product's price
-      })} 
-      className={style.CartBtn2}
-    >
-      Add to Cart
-    </button> */}
-  </SwiperSlide>
-  <SwiperSlide className={style.SwiperSlide2}>
-    <img src={img4} alt="Product Image" />
-    {/* <button 
-      onClick={() => handleClick({
-        id: 50, // Unique product id
-        img: img2,
-        price: 100 // Add the product's price
-      })} 
-      className={style.CartBtn2}
-    >
-      Add to Cart
-    </button> */}
-  </SwiperSlide>
-  <SwiperSlide className={style.SwiperSlide2}>
-    <img src={img2} alt="Product Image" />
-    {/* <button 
-      onClick={() => handleClick({
-        id: 50, // Unique product id
-        img: img2,
-        price: 100 // Add the product's price
-      })} 
-      className={style.CartBtn2}
-    >
-      Add to Cart
-    </button> */}
-  </SwiperSlide>
-  <SwiperSlide className={style.SwiperSlide2}>
-    <img src={img3} alt="Product Image" />
-    {/* <button 
-      onClick={() => handleClick({
-        id: 50, // Unique product id
-        img: img2,
-        price: 100 // Add the product's price
-      })} 
-      className={style.CartBtn2}
-    >
-      Add to Cart
-    </button> */}
-  </SwiperSlide>
-</Swiper>
-
-  
       
       <MDBFooter className='bg-light text-center text-white ' style={{marginTop:"30px"}} >
       <MDBContainer className='p-4 pb-0'>
@@ -291,4 +182,115 @@ function Home({handleClick}) {
 }
 
 export default Home
+
+
+
+
+
+
+
+// <h1>OUR CATEGORIES</h1>
+// <Row xs={2} md={4} className="g-1">
+// {data.map((image, idx) => (
+// <Col key={idx}>
+// <Card style={{border: "none"}}>
+// <Card.Img variant="top" src={image.image} className={style.cardimags} />
+// </Card>
+// </Col>
+// ))}
+// </Row>
+
+
+// <h1>
+// NEW IN
+// </h1>
+
+// <Swiper
+// slidesPerView={4}
+// autoplay={{
+// delay: 3500,
+// disableOnInteraction: false,
+// }}
+// spaceBetween={30}
+// breakpoints={{
+// 320: {
+// slidesPerView: 2,
+// spaceBetween: 20,
+// },
+// 768: {
+// slidesPerView: 3,
+// spaceBetween: 30,
+// },
+// }}
+// pagination={{}}
+// modules={[Grid, Autoplay, Navigation]}
+// className={`mySwiper ${style.mySwiperi22}`}
+// >
+
+// <SwiperSlide className={style.SwiperSlide2}>
+// <img src={img2} alt="Product Image" />
+// {/* <button 
+// onClick={() => handleClick({
+// id: 50, // Unique product id
+// img: img2,
+// price: 100 // Add the product's price
+// })} 
+// className={style.CartBtn2}
+// >
+// Add to Cart
+// </button> */}
+// </SwiperSlide>
+// <SwiperSlide className={style.SwiperSlide2}>
+// <img src={img} alt="Product Image" />
+// {/* <button 
+// onClick={() => handleClick({
+// id: 50, // Unique product id
+// img: img2,
+// price: 100 // Add the product's price
+// })} 
+// className={style.CartBtn2}
+// >
+// Add to Cart
+// </button> */}
+// </SwiperSlide>
+// <SwiperSlide className={style.SwiperSlide2}>
+// <img src={img4} alt="Product Image" />
+// {/* <button 
+// onClick={() => handleClick({
+// id: 50, // Unique product id
+// img: img2,
+// price: 100 // Add the product's price
+// })} 
+// className={style.CartBtn2}
+// >
+// Add to Cart
+// </button> */}
+// </SwiperSlide>
+// <SwiperSlide className={style.SwiperSlide2}>
+// <img src={img2} alt="Product Image" />
+// {/* <button 
+// onClick={() => handleClick({
+// id: 50, // Unique product id
+// img: img2,
+// price: 100 // Add the product's price
+// })} 
+// className={style.CartBtn2}
+// >
+// Add to Cart
+// </button> */}
+// </SwiperSlide>
+// <SwiperSlide className={style.SwiperSlide2}>
+// <img src={img3} alt="Product Image" />
+// {/* <button 
+// onClick={() => handleClick({
+// id: 50, // Unique product id
+// img: img2,
+// price: 100 // Add the product's price
+// })} 
+// className={style.CartBtn2}
+// >
+// Add to Cart
+// </button> */}
+// </SwiperSlide>
+// </Swiper>
 

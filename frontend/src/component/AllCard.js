@@ -31,6 +31,7 @@ const AllCard = ({ handleClick }) => {
   }, [navigate, t]);
 
   return (
+    <div className="allcon">
     <div className="bodycar">
       <div className="cards">
         <section className="py-4 container">
@@ -49,6 +50,7 @@ const AllCard = ({ handleClick }) => {
           </div>
         </section>
       </div>
+    </div>
     </div>
   );
 };
