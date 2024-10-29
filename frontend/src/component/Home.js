@@ -54,12 +54,31 @@ import Aos from 'aos'
 import  "aos/dist/aos.css" 
 import { useTranslation } from 'react-i18next';
 
+
+
+
+
+
 import './css/contact.css'
 import style from './css/home.module.css'
 
 
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+// Set up a custom marker icon if needed
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+  iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+});
+
 
 function Home({handleClick}) {
+  const position = [31.01839724453514, 29.79587584057321];
+
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   
@@ -204,6 +223,17 @@ function Home({handleClick}) {
   
 
     </div>     
+
+
+    <MapContainer center={position} zoom={13} style={{ height: "500px", width: "100%" }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution="" 
+      />
+      <Marker position={position}>
+        <Popup>Your Location</Popup>
+      </Marker>
+    </MapContainer>
       
       <MDBFooter className='bg-light text-center text-white ' style={{marginTop:"30px"}} >
       <MDBContainer className='p-4 pb-0'>
