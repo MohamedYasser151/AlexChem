@@ -4,6 +4,12 @@ import img2 from "./image/2.png";
 import img3 from "./image/3.png";
 import img4 from "./image/4.png";
 
+
+import img6 from "./image/6.jpg"
+import img7 from "./image/7.jpg"
+import img8 from "./image/8.jpg" 
+import img9 from "./image/9.jpg" 
+
 import { NavLink } from "react-router-dom";
 
 const fetchProductPrices = async () => {
@@ -63,7 +69,44 @@ const data = async () => {
             discount: 30,
             description: "description4",
             number: 1,
-        }
+        },
+
+        {
+            id: 5,
+            img: img6,
+            title: "title5",
+            price: prices[5] || 45,
+            discount: 30,
+            description: "description5",
+            number: 1,
+        },
+        {
+            id: 6,
+            img: img7,
+            title: "title6",
+            price: prices[6] || 45,
+            discount: 30,
+            description: "description6",
+            number: 1,
+        },
+        {
+            id: 7,
+            img: img8,
+            title: "title7",
+            price: prices[7] || 45,
+            discount: 30,
+            description: "description7",
+            number: 1,
+        },
+        {
+            id: 8,
+            img: img9,
+            title: "title8",
+            price: prices[4] || 45,
+            discount: 30,
+            description: "description8",
+            number: 1,
+        },
     ];
 };
 

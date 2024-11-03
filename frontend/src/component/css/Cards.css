@@ -44,7 +44,7 @@ then set the desired styles for .card-img. */
     /* border-top-left-radius: 80px 50px; */
     /* border-top-right-radius: 80px 50px; */
     /* border: 2px solid black; */
-    background-color: #228b22;
+    /* background-color: #228b22; */
     background-image: linear-gradient(to top,transparent 10px,rgba(0,0,0,0.3) 10px,rgba(0,0,0,0.3) 13px,transparent 13px);
   }
   

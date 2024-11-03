@@ -5,10 +5,10 @@ import  img2 from "./image/2.png";
 import img3 from "./image/3.png"
 import img4 from "./image/4.png"
 // import img5 from "./image/5.png"
-// import img6 from "./image/6.png"
-// import img7 from "./image/7.png"
-// import img8 from "./image/8.png" 
-// import img9 from "./image/9.png" 
+import img6 from "./image/6.jpg"
+import img7 from "./image/7.jpg"
+import img8 from "./image/8.jpg" 
+import img9 from "./image/9.jpg" 
 // import img10 from "./image/10.png" 
 // import img11 from "./image/11.png" 
 // import img12 from "./image/12.png" 
@@ -38,6 +38,27 @@ const data = [
     {
         id:4,
         image:img,
+       
+    },
+
+    {
+        id:5,
+        image:img6,
+       
+    },
+    {
+        id:6,
+        image:img7,
+       
+    },
+    {
+        id:4,
+        image:img8,
+       
+    },
+    {
+        id:4,
+        image:img9,
        
     },
     
