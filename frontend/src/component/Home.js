@@ -49,7 +49,7 @@ import img4 from "./image/4.png"
 
 import flowers from './image/flowers.png'
 import flowers2 from './image/flowers2.png'
-import Perfume from './image/Perfume.png'
+
 import Aos from 'aos'
 import  "aos/dist/aos.css" 
 import { useTranslation } from 'react-i18next';

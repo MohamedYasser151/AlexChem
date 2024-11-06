@@ -14,12 +14,12 @@ function Chat() {
 
   const [conversation, setConversation] = useState([]);
 
-  useEffect(() => {
-    const login = Cookies.get('login');
-    if (login !== 'true') {
-      navigate('/signin');
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const login = Cookies.get('login');
+  //   if (login !== 'true') {
+  //     navigate('/signin');
+  //   }
+  // }, [navigate]);
 
   const handleUserInput = (choice) => {
     switch (choice) {
@@ -82,8 +82,8 @@ function Chat() {
            
         </div>
         <div className={style.choices}>
-          <button onClick={() => handleUserInput(t("Return and refund policy?"))}>{t("Return and refund policy?")}</button>
-          <button onClick={()=>handleUserInput(t("How can I purchase the product?"))}>{t("How can I purchase the product?")}</button>
+          {/* <button onClick={() => handleUserInput(t("Return and refund policy?"))}>{t("Return and refund policy?")}</button> */}
+          {/* <button onClick={()=>handleUserInput(t("How can I purchase the product?"))}>{t("How can I purchase the product?")}</button> */}
           <button onClick={() => handleUserInput(t("How to contact"))}>{t("How to contact")}</button>
         </div>
       </div>

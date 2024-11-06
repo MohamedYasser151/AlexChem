@@ -1,110 +1,110 @@
-.allchat{
+.allchat {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, #f7eaf5, #fce4ec); /* خلفية بألوان فاتحة */
+
 }
 
 ::-webkit-scrollbar {
-    width: 1px; 
-  }
-  
-  
-.cardchat{
+    width: 1px;
+}
+
+.cardchat {
     width: 330px;
     height: 450px;
-    box-shadow: 0 0 2px #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    background: #f1f1f1;
-    max-height: 450px; 
-    overflow-y: auto; 
-    
+    background: #ffffff; /* خلفية بيضاء تتناسق مع شريط التنقل */
+    max-height: 450px;
+    overflow-y: auto;
 }
-.header{
+
+.header {
     width: 100%;
     height: 60px;
-    background: #fff;
-    border-radius:10px  10px  0 0 ;
+    background: #e1bee7; /* لون بنفسجي فاتح للرأس */
+    border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
-    justify-content:start;
-    color: #4B53A6;
+    justify-content: start;
+    color: #4B53A6; /* لون نص بنفسجي غامق */
 }
-.header img{
+
+.header img {
     width: 50px;
-   margin-left: 20px;
+    margin-left: 20px;
 }
-.choices button{
+
+.choices button {
     width: 120px;
     height: 50px;
-    border: 1px solid #4B53A6;
-    background: #fff;
+    border: 1px solid #b39ddb; /* لون بنفسجي فاتح للحدود */
+    background: #f3e5f5; /* خلفية بنفسجي فاتح */
     border-radius: 10px;
     color: #4B53A6;
     font-size: 11px;
     margin: 10px;
+    transition: background 0.3s;
 }
-/* .conversation{
+
+.choices button:hover {
+    background: #d1c4e9; /* لون بنفسجي عند التمرير */
+    color: #4B53A6; /* تباين للأزرار */
+}
+
+.conversation p {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-.conversation p{
-    width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.conversation span{
-  
+
+.conversation span {
     width: 85%;
-    background: #fff;
+    background: #fafafa; /* خلفية خفيفة للرسائل */
     margin: 10px;
     border-radius: 4px 11px 11px 11px;
     font-size: 13px;
     color: #4B53A6;
-   padding: 5px;
-
+    padding: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
 }
-.imagechat{
+
+.imagechat {
     width: 90%;
     display: flex;
     justify-content: start;
     align-items: center;
 }
-/* .imagechat strong{
-    font-size: 10px;
-    margin-top: 26px;
-   margin-left: 5px;
 
-} */
-.conversation img{
+.conversation img {
     width: 30px;
-   margin-top: 10px;
-    
+    margin-top: 10px;
 }
-.conversation small{
+
+.conversation small {
     width: 85%;
     display: flex;
     justify-content: end;
-    color: #777;
+    color: #8e8e8e; /* لون رمادي للنصوص الثانوية */
     font-size: 13px;
 }
-.conversation .user{
+
+.conversation .user {
     width: 85%;
-   padding: 5px;
-    background: #007bff;
+    padding: 5px;
+    background: #c5cae9; /* خلفية بنفسجي فاتح للرسائل الخاصة بالمستخدم */
     margin: 3px;
-    border-radius:  11px 4px 11px 11px ;
-    /* font-size: 13px; */
-    color: #fff;
+    border-radius: 11px 4px 11px 11px;
+    color: #4B53A6;
 }
-@media (max-width:601px){
-    .cardchat{
+
+@media (max-width: 601px) {
+    .cardchat {
         width: 90%;
     }
 }

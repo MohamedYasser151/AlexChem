@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 import './css/Navbars.css';
 // import Img from './image/icon.png'
-const  Navbars = ({size}) => {
+const  Navbars = ({size,heart}) => {
   const [login, setLogin] = useState(false);
   const [filter ,setFilter] = useState('');
   const navigator = useNavigate ()
@@ -82,13 +82,13 @@ const changeFr = () =>{
             <NavLink to="/product" className="NavLink"  >{t("products")}</NavLink>
             {/* <NavLink to="/download" className="NavLink"  >{t("Download App")}</NavLink> */}
             
-            {/* <NavLink to="/chatbot" className="NavLink">
+            <NavLink to="/chatbot" className="NavLink">
             {t("Support Bot")}
-            </NavLink> */}
+            </NavLink>
             {/* <NavLink  className="NavLink" onClick={handleRemove}>{t("Log out")}</NavLink> */}
             <NavLink className="NavLink" onClick={changeFr}>{t("Arabic")}</NavLink>
             <NavLink className="NavLink" onClick={changeEn}>{t("English")}</NavLink>
-            <NavLink to="#"className="NavLink1" ><i class="fa-solid fa-heart heart" ></i></NavLink>
+            <NavLink to="/wishlist"className="NavLink1" ><i class="fa-solid fa-heart heart" ></i><span className="numbercart">{heart}</span></NavLink>
             <NavLink to="/cartitem"className="NavLink" ><i class="fa-solid fa-cart-shopping"></i> <span className="numbercart">{size}</span></NavLink>
           </Nav>
 
