@@ -100,6 +100,7 @@ const App = ()=>{
     const updatedHeart = [...heart, product];
     const isPresent = heart.some((item) => item.id === product.id);
 
+    
     if (isPresent) {
       setWarning2(true);
       setTimeout(() => {
