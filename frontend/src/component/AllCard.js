@@ -7,7 +7,7 @@ import "./css/AllCards.css";
 import "./css/Cards.css";
 import { useTranslation } from 'react-i18next';
 
-const AllCard = ({ handleClick ,handleClickHeart}) => {
+const AllCard = ({ heart,handleClick ,handleClickHeart}) => {
   const [dataCard, setDataCard] = useState([]); // حفظ البيانات في حالة state
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -36,17 +36,14 @@ const AllCard = ({ handleClick ,handleClickHeart}) => {
       <div className="cards">
         <section className="py-4 container">
           <div className="row justify-content-center">
-            {dataCard.length > 0 ? (
-              dataCard.map((item) => (
+            
+              {dataCard.map((item) => (
                 <div className="col-6 col-md-6 col-lg-3 mx-0 mb-4" key={item.id}>
                   <div className="card p-0 overflow-hidden shadow cards">
-                    <Cards item={item} handleClick={handleClick} handleClickHeart={handleClickHeart}/>
+                    <Cards item={item} handleClick={handleClick} handleClickHeart={handleClickHeart} heart={heart}/>
                   </div>
                 </div>
-              ))
-            ) : (
-              <p>Loading data...</p> // رسالة في حال عدم وجود بيانات
-            )}
+              ))}
           </div>
         </section>
       </div>

@@ -188,14 +188,22 @@ then set the desired styles for .card-img. */
 
 /* heartbtn */
 
-.heartbtn{
+.active-heart{
+  color: red; /* تغيير اللون الأحمر عند الإضافة */
+
+}
+.heartbtn2{
+  font-size: 25px;
+
+}
+.heartbtn, .heartbtn2{
   background: none;
   border: none;
   position: absolute;
   top: 0;
   right: 0;
 }
-.heartbtn .heart{
+.heartbtn  .heart{
   font-size: 25px;
   color: #aaa7a7;
 }

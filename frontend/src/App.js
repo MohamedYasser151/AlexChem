@@ -168,7 +168,7 @@ const App = ()=>{
       <Route path="/chatbot" element={
         
         <div>
-        <Navbars size={cart.length}  />
+        <Navbars size={cart.length} heart={heart.length} />
         <ChatBot/>
         </div>
         }/>
@@ -201,9 +201,10 @@ const App = ()=>{
           {/* wishlist heart */}
           <Route path="/wishlist" element={
             <div>
-             {/* <Navbars size={cart.length}  /> */}
+                          <Navbars size={cart.length}  heart={heart.length}/>
 
-          <Wishlist data={heart} removeFromCart={removeFromCart} setData={setHeart} handleClick={handleClick} />
+
+          <Wishlist data={heart} removeFromHeart={removeFromHeart} setData={setHeart} handleClick={handleClick} />
           </div>
           } />
           {
@@ -217,9 +218,9 @@ const App = ()=>{
           <React.Suspense fallback={<Loading/>}>
 
           <div>
-             <Navbars size={cart.length}  />
+             <Navbars size={cart.length}  heart={heart.length}/>
               
-             < AllCard handleClick={handleClick} handleClickHeart={handleClickHeart}/> 
+             < AllCard handleClick={handleClick} handleClickHeart={handleClickHeart} heart={heart}/> 
              
               {/* {
                 warning && <div className="warning">Item is already added to cart</div>

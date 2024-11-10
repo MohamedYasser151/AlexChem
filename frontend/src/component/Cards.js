@@ -9,7 +9,7 @@ import "./css/Cards.css"
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
 
-const  Cards =({item,handleClick,handleClickHeart})=>{
+const  Cards =({item,handleClick,handleClickHeart,heart})=>{
   const { t, i18n } = useTranslation();
   
   const [sendData,setSendData ] = useState({
@@ -101,9 +101,13 @@ const handleChange = (e) => {
               </div> */}
 <div className="card">
     <div className="card-img"><img class="img" src={img}/></div>
-    <button className="heartbtn" onClick={()=>handleClickHeart(item)}>
-    <i class="fa-solid fa-heart heart" ></i>
-    </button>
+    <button
+  className={`heartbtn2 ${heart.some((el) => el.id === item.id) ? 'active-heart' : ''}`}
+  onClick={() => handleClickHeart(item)}
+>
+  <i className="fa-solid fa-heart heart"></i>
+</button>
+
     <div className="card-title">{title}</div>
     <div className="card-subtitle">{description}</div>
     <hr className="card-divider"/>
