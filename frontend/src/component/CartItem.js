@@ -96,14 +96,14 @@ const CartItem = ({ data, setData, removeFromCart }) => {
                   <button onClick={() => decrease(item.id)}>-</button>
                 </div>
                 <div className="remoprice">
-                  <span name={`price[${i}]`}>${item.price}</span>
+                  <span name={`price[${i}]`}>EGP {item.price}</span>
                   <button onClick={() => removeFromCart(i)}>Remove</button>
                 </div>
               </div>
             ))}
             <div className="total">
               <span className="texttotal">Total price of your cart</span>
-              <span className="totalre"> ${price}</span>
+              <span className="totalre"> EGP {price}</span>
             </div>
             <button className="btn-31" onClick={handleSubmit}>
               <span className="text-container">

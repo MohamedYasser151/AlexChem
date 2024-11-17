@@ -61,7 +61,7 @@ const CartItem = ({ data, setData, removeFromHeart,handleClick }) => {
             <div className="image-container ">
               <img src={item.img} alt={item.title} className="" />
               <div className="price">
-                LE{item.price}
+              EGP {item.price}
               </div>
             </div>
             <label className="favorite " onClick={() => removeFromHeart(i)}>
