@@ -13,22 +13,13 @@ const AllCard = ({ heart,handleClick ,handleClickHeart}) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // const login = Cookies.get('login');
-    // if (login !== 'true') {
-    //   navigate('/signin');
-    // }
-
     const fetchData = async () => {
-      try {
-        const result = await data(t); // انتظار البيانات من data(t)
-        setDataCard(result || []); // تعيين البيانات أو مصفوفة فارغة
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+      const result = await data();
+      setDataCard(result || []);
     };
 
-    fetchData(); // استدعاء الدالة لجلب البيانات
-  }, [navigate, t]);
+    fetchData();
+  }, []);
 
   return (
     <div className="allcon">

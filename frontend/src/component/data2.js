@@ -5,10 +5,10 @@ import img3 from "./image/3.png";
 import img4 from "./image/4.png";
 
 
-import img6 from "./image/6.jpg"
-import img7 from "./image/7.jpg"
-import img8 from "./image/8.jpg" 
-import img9 from "./image/9.jpg" 
+import img6 from "./image/6.png"
+import img7 from "./image/7.png"
+import img8 from "./image/8.png" 
+import img9 from "./image/9.png" 
 
 import { NavLink } from "react-router-dom";
 
@@ -34,15 +34,15 @@ const data = async () => {
     const prices = await fetchProductPrices(); 
 
     return [
-        {
-            id: 1,
-            img: img1,
-            title: "title1",
-            price: prices[1] || 50, // السعر من API، وإذا لم يكن متاحاً سيتم وضع قيمة افتراضية
-            discount: 25,
-            description: "description1",
-            number: 1,
-        },
+        // {
+        //     id: 1,
+        //     img: img1,
+        //     title: "title1",
+        //     price: prices[1] || 50, // السعر من API، وإذا لم يكن متاحاً سيتم وضع قيمة افتراضية
+        //     discount: 25,
+        //     description: "description1",
+        //     number: 1,
+        // },
         {
             id: 2,
             img: img2,
