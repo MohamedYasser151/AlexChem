@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-// import data from './data2';
-import data from './data';
+import data from './data2';
 import Cards from './Cards';
 import "./css/AllCards.css";
 import "./css/Cards.css";
@@ -14,8 +13,13 @@ const AllCard = ({ heart,handleClick ,handleClickHeart}) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-  setDataCard(data);
-}, []);
+    const fetchData = async () => {
+      const result = await data();
+      setDataCard(result || []);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="allcon">

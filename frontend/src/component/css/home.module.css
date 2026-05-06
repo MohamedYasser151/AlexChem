@@ -101,7 +101,11 @@
 }
 
 
+.imglog2{
+    width: 100%;
+    box-shadow: 0px 0px 8px #e1a3c898;
 
+}
 /* contact */
 
 .contact{

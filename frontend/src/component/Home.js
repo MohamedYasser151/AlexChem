@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import img1 from './image/1.png'
+import imglog from './logo/2.png'
+import imglog2 from './logo/3.png'
 import data from './data';
 
 import BtnHome from './btnHome';
@@ -100,13 +102,13 @@ function Home({handleClick}) {
   
   useEffect(() => {
     const typed1 = new Typed(textRef1.current, {
-        strings: ["Fragrances that"],
+        strings: ["Style that"],
         typeSpeed: 50,
         showCursor: false,
     });
 
     const typed2 = new Typed(textRef2.current, {
-        strings: ["attract people"],
+        strings: ["turns heads"],
         typeSpeed: 50,
         startDelay: 2000, 
         showCursor: false,
@@ -134,6 +136,8 @@ function Home({handleClick}) {
 </section>
 
 
+    {/* <img src={imglog} alt="" className={style.imglog} data-aos="fade-right"/> */}
+    <img src={imglog2} alt="" className={style.imglog2}/>
 
      
 <div class="stats-container">
@@ -165,16 +169,16 @@ function Home({handleClick}) {
   
   <div class="flexx">
     <div class="statt">
-      <img src={img} alt="" data-aos="fade-up"/>
+      <img src={imglog} alt="" data-aos="fade-up"/>
     </div>
     <div class="statt">
-      <img src={img} alt="" data-aos="fade-up"/>
+      <img src={imglog} alt="" data-aos="fade-up"/>
     </div>
     <div class="statt">
-      <img src={img} alt="" data-aos="fade-up"/>
+      <img src={imglog} alt="" data-aos="fade-up"/>
     </div>
     <div class="statt">
-      <img src={img} alt="" data-aos="fade-up"/>
+      <img src={imglog} alt="" data-aos="fade-up"/>
     </div>
   </div>
 </div>
@@ -225,7 +229,7 @@ function Home({handleClick}) {
     </div>     
 
 
-    <MapContainer center={position} zoom={13} style={{ height: "500px", width: "100%" }}>
+    {/* <MapContainer center={position} zoom={13} style={{ height: "500px", width: "100%" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="" 
@@ -233,7 +237,7 @@ function Home({handleClick}) {
       <Marker position={position}>
         <Popup>Your Location</Popup>
       </Marker>
-    </MapContainer>
+    </MapContainer> */}
       
       <MDBFooter className='bg-light text-center text-white ' style={{marginTop:"30px"}} >
       <MDBContainer className='p-4 pb-0'>

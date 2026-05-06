@@ -16,7 +16,7 @@
 .NavLink1{
     display: flex;
     text-decoration: none;
-    color: #000;
+    color: #282424be;
     align-items: center;
     margin-left: 40px;
     justify-content: center;
@@ -26,16 +26,35 @@
   .NavLink:hover,
   .NavLink:focus,
   .NavLink:active {
-     color: #4B53A6;
+  color: #d965ab;
   }
-  .heart:hover,
-  .heart:focus,
-  .heart:active {
-     color: red;
-  }
-  /* .Toggle{
-    background: #4B53A6;
-  } */
+  .NavLink {
+  position: relative;
+  text-decoration: none;
+}
+
+/* الخط */
+.NavLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #d965ab;
+  transition: 0.3s;
+}
+
+/* hover */
+.NavLink:hover::after {
+  width: 100%;
+}
+
+/* active */
+.NavLink.active::after {
+  width: 100%;
+}
+
   .search{
     transition: 0.3s;
    
@@ -54,6 +73,9 @@
   font-weight: weight;
   font-style: normal;
   }
+  .icon img{
+    width: 100px;
+  }
   .icon2{
   color: #d965ab;
 
@@ -63,7 +85,9 @@
     position:relative;
     bottom: 10px;
     left: 4px;
+    
   }
+  
 
 @media(max-width:991px){
   .NavLink{

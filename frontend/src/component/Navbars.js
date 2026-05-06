@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavDropdown, Container, Nav, Form, Button } from 'react-bootstrap';
 import {NavLink,useNavigate } from "react-router-dom";
+import img from "./logo/2.png"
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 import './css/Navbars.css';
@@ -71,25 +72,45 @@ const changeFr = () =>{
       <Container fluid>
       <NavLink to="/home" className='icon' >
         <Navbar.Brand  className='icon2' style={{ fontSize:"30px"}}>
-        AlexChem
+        <img src={img}/>
        </Navbar.Brand>
         </NavLink>
 
         <Navbar.Toggle aria-controls="navbarScroll " className="Toggle"  />
         <Navbar.Collapse id="navbarScroll ">
           <Nav className="mr-auto  mx-auto my-lg-0" style={{ maxHeight: '100px'}} navbarScroll>
-            <NavLink to="/home" className="NavLink"  >{t("Home")}</NavLink>
-            <NavLink to="/product" className="NavLink"  >{t("products")}</NavLink>
-            {/* <NavLink to="/download" className="NavLink"  >{t("Download App")}</NavLink> */}
-            
-            <NavLink to="/chatbot" className="NavLink">
-            {t("Support Bot")}
-            </NavLink>
+           <NavLink 
+  to="/home" 
+  className={({ isActive }) => isActive ? "NavLink active" : "NavLink"}
+>
+  {t("Home")}
+</NavLink>
+
+<NavLink 
+  to="/product" 
+  className={({ isActive }) => isActive ? "NavLink active" : "NavLink"}
+>
+  {t("products")}
+</NavLink>
+
+<NavLink 
+  to="/chatbot" 
+  className={({ isActive }) => isActive ? "NavLink active" : "NavLink"}
+>
+  {t("Support Bot")}
+</NavLink>
             {/* <NavLink  className="NavLink" onClick={handleRemove}>{t("Log out")}</NavLink> */}
             <NavLink className="NavLink" onClick={changeFr}>{t("Arabic")}</NavLink>
             <NavLink className="NavLink" onClick={changeEn}>{t("English")}</NavLink>
-            <NavLink to="/wishlist"className="NavLink1" ><i class="fa-solid fa-heart heart" ></i><span className="numbercart">{heart}</span></NavLink>
-            <NavLink to="/cartitem"className="NavLink" ><i class="fa-solid fa-cart-shopping"></i> <span className="numbercart">{size}</span></NavLink>
+            <NavLink to="/wishlist" className="NavLink">
+  <i className="fa-regular fa-heart"></i>
+  <span className="numbercart">{heart}</span>
+</NavLink>
+
+<NavLink to="/cartitem" className="NavLink">
+  <i className="fa-solid fa-bag-shopping"></i>
+  <span className="numbercart">{size}</span>
+</NavLink>
           </Nav>
 
           {/* <Form className="d-flex"  onSubmit={handleClick}>
